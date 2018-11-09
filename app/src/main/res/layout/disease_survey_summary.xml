@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+        <com.onlinedoctor.view.CommonActionbarBackableRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+<!--     <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_title"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button 
+		    android:id="@+id/bt_back"
+		    android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/selector_back"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="我的问卷"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/Big_TextSize" />
+
+        <TextView
+            android:id="@+id/tv_add"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="添加"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/Small_TextSize" />
+
+    </RelativeLayout> -->
+
+    <ListView
+        android:id="@+id/lv_disease_survey"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+	
+
+</LinearLayout>

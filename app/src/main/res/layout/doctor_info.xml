@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <!-- 引入common actionbar及其逻辑 -->
+
+    <com.onlinedoctor.view.CommonActionbarBackableRelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/mainrelative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/actionbar">
+
+        <ScrollView
+            android:id="@id/scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_marginTop="15.0dip"
+                    android:background="@drawable/list_line" />
+
+                <LinearLayout
+                    android:id="@id/doctor_info_head_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="85.0dip"
+                    android:background="@drawable/selector_bg_pressed_white_gary_light"
+                    android:orientation="horizontal"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip">
+
+                    <TextView
+                        android:id="@id/doctor_info_head_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:text="头像"
+                        android:textColor="@color/black"
+                        android:textSize="16.0sp" />
+
+                    <View
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0" />
+
+                    <RelativeLayout
+                        android:layout_width="65.0dip"
+                        android:layout_height="65.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10.0dip">
+
+                        <ImageView
+                            android:id="@id/doctor_info_head_iv"
+                            android:layout_width="65.0dip"
+                            android:layout_height="65.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_vertical"
+                            android:contentDescription="@string/content_des"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/upload_btn" />
+
+                        <!--<FrameLayout-->
+                            <!--android:id="@+id/progressBarHeader"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:alpha="0.4"-->
+                            <!--android:animateLayoutChanges="true"-->
+                            <!--android:background="#000000"-->
+                            <!--android:clickable="true"-->
+                            <!--android:visibility="gone">-->
+
+                        <ProgressBar
+                            android:id="@+id/progressBarHeader"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:indeterminateDrawable="@drawable/frame_loading"
+                            android:indeterminateDuration="1800"
+                            android:visibility="gone" />
+
+                            <!--<ProgressBar-->
+                                <!--style="?android:attr/progressBarStyleLarge"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_gravity="center"-->
+                                <!--android:indeterminate="true" />-->
+                        <!--</FrameLayout>-->
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:contentDescription="@string/content_des"
+                        android:src="@drawable/list_item_arrow" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@drawable/list_line" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_marginTop="15.0dip"
+                    android:background="@drawable/list_line" />
+
+                <LinearLayout
+                    android:id="@id/doctor_info_name_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/selector_bg_pressed_white_gary_light"
+                    android:clickable="true"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip">
+
+                    <TextView
+                        android:id="@id/name_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="15.0dip"
+                        android:gravity="center_vertical"
+                        android:text="姓名"
+                        android:textColor="@color/black"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@id/doctor_info_name_tv"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:ellipsize="end"
+                        android:gravity="center|right"
+                        android:paddingRight="10.0dip"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/doctor_info_value"
+                        android:textSize="16.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:contentDescription="@string/content_des"
+                        android:src="@drawable/list_item_arrow" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@drawable/list_line" />
+
+                <LinearLayout
+                    android:id="@id/doctor_info_serial_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/selector_bg_pressed_white_gary_light"
+                    android:clickable="true"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="15.0dip"
+                        android:gravity="center_vertical"
+                        android:text="医行者号"
+                        android:textColor="@color/black"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@id/doctor_info_serial_tv"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:ellipsize="end"
+                        android:gravity="center|right"
+                        android:paddingRight="10.0dip"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="#ff0288ce"
+                        android:textSize="16.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:contentDescription="@string/content_des"
+                        android:src="@drawable/list_item_arrow" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@drawable/list_line"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/doctor_info_codebar_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/selector_bg_pressed_white_gary_light"
+                    android:clickable="false"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip">
+
+                    <TextView
+                        android:id="@+id/qrcode_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="15.0dip"
+                        android:gravity="center_vertical"
+                        android:text="二维码名片"
+                        android:textColor="@color/gray_font"
+                        android:textSize="16.0sp" />
+
+                    <View
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0" />
+
+                    <ImageView
+                        android:layout_width="30.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10.0dip"
+                        android:src="@drawable/ico_codebar_example" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:contentDescription="@string/content_des"
+                        android:src="@drawable/list_item_arrow" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@drawable/list_line"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@id/doctor_info_verify_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="50.0dip"
+                        android:background="@drawable/selector_bg_pressed_white_gary_light"
+                        android:paddingLeft="15dip"
+                        android:paddingRight="15dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="15.0dip"
+                            android:gravity="center_vertical"
+                            android:text="医生认证"
+                            android:textColor="@color/black"
+                            android:textSize="16.0sp" />
+
+                        <TextView
+                            android:id="@id/doctor_info_verify_status_tv"
+                            android:layout_width="0.0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.0"
+                            android:ellipsize="end"
+                            android:gravity="center|right"
+                            android:paddingRight="10.0dip"
+                            android:singleLine="true"
+                            android:text="未认证"
+                            android:textColor="#ffff0000"
+                            android:textSize="16.0sp" />
+
+                        <ImageView
+                            android:id="@id/doctor_info_verify_status_expand_arrow_img_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:contentDescription="@string/content_des"
+                            android:src="@drawable/list_item_arrow" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dip"
+                        android:background="@drawable/list_line" />
+                </LinearLayout>
+
+                <!--<LinearLayout-->
+                <!--android:id="@id/doctor_info_auto_verify_view"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical" >-->
+
+                <LinearLayout
+                    android:id="@id/doctor_info_auto_verify_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/selector_bg_pressed_white_gary_light"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip">
+
+                    <TextView
+                        android:id="@+id/auth_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="15.0dip"
+                        android:gravity="center_vertical"
+                        android:text="权威认证"
+                        android:textColor="@color/black"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@id/doctor_info_auto_verify_status_tv"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:ellipsize="end"
+                        android:gravity="center|right"
+                        android:paddingRight="10.0dip"
+                        android:singleLine="true"
+                        android:text="未认证"
+                        android:textColor="#ffff0000"
+                        android:textSize="16.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:contentDescription="@string/content_des"
+                        android:src="@drawable/list_item_arrow" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@drawable/list_line" />
+                <!--</LinearLayout>-->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_marginTop="15.0dip"
+                    android:background="@drawable/list_line" />
+
+                <LinearLayout
+                    android:id="@id/doctor_info_gender_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/selector_bg_pressed_white_gary_light"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip">
+
+                    <TextView
+                        android:id="@+id/gender_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="15.0dip"
+                        android:gravity="center_vertical"
+                        android:text="性别"
+                        android:textColor="@color/black"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@id/doctor_info_gender_tv"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:ellipsize="end"
+                        android:gravity="center|right"
+                        android:paddingRight="10.0dip"
+                        android:singleLine="true"
+                        android:textColor="@color/doctor_info_value"
+                        android:textSize="16.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:contentDescription="@string/content_des"
+                        android:src="@drawable/list_item_arrow" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@drawable/list_line" />
+
+                <LinearLayout
+                    android:id="@id/doctor_info_birth_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/selector_bg_pressed_white_gary_light"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="15.0dip"
+                        android:gravity="center_vertical"
+                        android:text="生日"
+                        android:textColor="@color/black"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@id/doctor_info_birth_tv"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:ellipsize="end"
+                        android:gravity="center|right"
+                        android:paddingRight="10.0dip"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/doctor_info_value"
+                        android:textSize="16.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:contentDescription="@string/content_des"
+                        android:src="@drawable/list_item_arrow" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@drawable/list_line" />
+
+                <LinearLayout
+                    android:id="@id/doctor_info_email_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/selector_bg_pressed_white_gary_light"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="15.0dip"
+                        android:gravity="center_vertical"
+                        android:text="邮箱"
+                        android:textColor="@color/black"
+                        android:textSize="16.0sp" />
+
+
+                    <TextView
+                        android:id="@id/doctor_info_email_tv"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:ellipsize="end"
+                        android:gravity="center|right"
+                        android:paddingRight="10.0dip"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/doctor_info_value"
+                        android:textSize="16.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:contentDescription="@string/content_des"
+                        android:src="@drawable/list_item_arrow" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@id/doctor_info_detial_address_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50.0dip"
+                    android:background="@drawable/selector_bg_pressed_white_gary_light"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="15.0dip"
+                        android:gravity="center_vertical"
+                        android:text="详细地址"
+                        android:textColor="@color/black"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@id/doctor_info_detial_address_tv"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:ellipsize="end"
+                        android:gravity="center|right"
+                        android:maxWidth="145.0dip"
+                        android:paddingRight="10.0dip"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/doctor_info_value"
+                        android:textSize="16.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:contentDescription="@string/content_des"
+                        android:src="@drawable/list_item_arrow" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@drawable/list_line" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:layout_marginTop="15dip"
+                    android:background="@drawable/list_line" />
+
+
+                <LinearLayout
+                    android:id="@+id/doctor_info_clinic_addr_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_bg_pressed_white_gary_light"
+                    android:paddingBottom="15dip"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip"
+                    android:paddingTop="15dip">
+
+                    <TextView
+                        android:id="@+id/addr_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="15.0dip"
+                        android:gravity="center_vertical"
+                        android:text="医院"
+                        android:textColor="@color/black"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@+id/doctor_info_clinic_addr_tv"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center|right"
+                        android:paddingRight="10.0dip"
+                        android:text=""
+                        android:textColor="@color/doctor_info_value"
+                        android:textSize="16.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:contentDescription="@string/content_des"
+                        android:src="@drawable/list_item_arrow" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@drawable/list_line" />
+
+                <LinearLayout
+                    android:id="@+id/doctor_info_room_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_bg_pressed_white_gary_light"
+                    android:paddingBottom="15dip"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip"
+                    android:paddingTop="15dip">
+
+                    <TextView
+                        android:id="@+id/room_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="15.0dip"
+                        android:gravity="center_vertical"
+                        android:text="科室"
+                        android:textColor="@color/black"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@+id/doctor_info_room_tv"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center|right"
+                        android:paddingRight="10.0dip"
+                        android:text=""
+                        android:textColor="@color/doctor_info_value"
+                        android:textSize="16.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:contentDescription="@string/content_des"
+                        android:src="@drawable/list_item_arrow" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@drawable/list_line" />
+
+                <LinearLayout
+                    android:id="@+id/doctor_info_rank_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_bg_pressed_white_gary_light"
+                    android:paddingBottom="15dip"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip"
+                    android:paddingTop="15dip">
+
+                    <TextView
+                        android:id="@+id/rank_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="15.0dip"
+                        android:gravity="center_vertical"
+                        android:text="职称"
+                        android:textColor="@color/black"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@+id/doctor_info_rank_tv"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center|right"
+                        android:paddingRight="10.0dip"
+                        android:text=""
+                        android:textColor="@color/doctor_info_value"
+                        android:textSize="16.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:contentDescription="@string/content_des"
+                        android:src="@drawable/list_item_arrow" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@drawable/list_line" />
+
+                <LinearLayout
+                    android:id="@id/doctor_info_introduce_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_bg_pressed_white_gary_light"
+                    android:paddingBottom="15dip"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip"
+                    android:paddingTop="15dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginRight="15.0dip"
+                        android:gravity="center_vertical"
+                        android:text="介绍"
+                        android:textColor="@color/black"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:id="@id/doctor_info_introduce_tv"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center|right"
+                        android:paddingRight="10.0dip"
+                        android:text=""
+                        android:textColor="@color/doctor_info_value"
+                        android:textSize="16.0sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:contentDescription="@string/content_des"
+                        android:src="@drawable/list_item_arrow" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@drawable/list_line" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:background="@drawable/title_bg" />
+            </LinearLayout>
+        </ScrollView>
+
+
+        <FrameLayout
+            android:id="@+id/progressBarHolder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.4"
+            android:animateLayoutChanges="true"
+            android:background="#000000"
+            android:clickable="true"
+            android:visibility="gone">
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/shadow_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/universal_shadow_height"
+        android:layout_below="@id/actionbar"
+        android:background="@drawable/shadow" />
+
+
+</RelativeLayout>

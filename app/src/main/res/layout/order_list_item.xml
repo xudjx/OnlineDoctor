@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="10dp">
+
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="项目项目项项目项目项"
+        android:textColor="@color/black"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="18sp"
+        android:layout_marginLeft="5dp"
+        android:layout_toLeftOf="@id/et_amount"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">"</TextView>
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:text="1900-01-01 00:00"
+        android:textColor="@color/gray"></TextView>
+
+    <TextView
+        android:id="@+id/et_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="+20.50"
+        android:textColor="@color/black"
+        android:layout_marginRight="5dp"
+        android:textSize="20sp"></TextView>
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_date"
+        android:layout_alignBottom="@+id/tv_date"
+        android:layout_alignRight="@+id/et_amount"
+        android:layout_marginRight="5dp"
+        android:text="交易完成" />
+
+
+</RelativeLayout>

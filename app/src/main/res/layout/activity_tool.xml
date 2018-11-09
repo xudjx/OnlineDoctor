@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="80dp"-->
+        <!--android:background="@color/title_blue" >-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textView1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/title_tool"-->
+            <!--android:textColor="#FFFFFF"-->
+            <!--android:textSize="@dimen/Small_TextSize"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:paddingBottom="15dp" />-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<GridView-->
+        <!--android:id="@+id/tools_grid"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:gravity="center"-->
+        <!--android:horizontalSpacing="3pt"-->
+        <!--android:numColumns="3"-->
+        <!--android:verticalSpacing="3pt" />-->
+
+
+    <LinearLayout
+        android:id="@+id/firstPart"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/tool_background">
+
+        <!--<ImageView-->
+            <!--android:id="@+id/mine_face"-->
+            <!--android:layout_width="73dp"-->
+            <!--android:layout_height="73dp"-->
+            <!--android:layout_marginLeft="60dp"-->
+            <!--android:layout_marginTop="90dp"-->
+            <!--android:src="" />-->
+
+        <TextView
+            android:id="@+id/mine_name"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="183dp"
+            android:text="工 具"
+            android:textColor="@color/white"
+            android:textSize="26sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/firstPart"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <ListView
+            android:id="@+id/lv_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:divider="@null">
+        </ListView>
+
+    </LinearLayout>
+
+</RelativeLayout>

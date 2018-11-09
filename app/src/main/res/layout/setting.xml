@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_gray_color"
+    android:orientation="vertical" >
+
+    <!-- <include layout="@layout/actionbar_setting" /> -->
+    <com.onlinedoctor.view.CommonActionbarBackableRelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    
+    <ScrollView
+        android:id="@+id/mainlayout"
+        android:layout_below="@id/actionbar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginTop="20.0dip"
+                android:background="@drawable/list_line" />
+
+            <LinearLayout
+                android:id="@+id/setting_quiet_view"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/selector_bg_pressed_white_gary_light"
+                android:paddingLeft="15.0dip"
+                android:paddingRight="15.0dip" >
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:text="勿扰模式"
+                    android:textColor="@color/black"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@id/setting_login_phone_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:text=""
+                    android:textColor="#ff666666"
+                    android:textSize="14.0sp" />
+
+                <!--<ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:contentDescription="@string/content_des"
+                    android:src="@drawable/list_item_arrow" />-->
+                <Switch
+                    android:id="@+id/is_quiet_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@drawable/list_line" />
+
+            <LinearLayout
+                android:id="@+id/setting_password_modify_view"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/selector_bg_pressed_white_gary_light"
+                android:paddingLeft="15.0dip"
+                android:paddingRight="15.0dip" >
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:text="修改密码"
+                    android:textColor="@color/black"
+                    android:textSize="16.0sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:contentDescription="@string/content_des"
+                    android:src="@drawable/list_item_arrow" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@drawable/list_line" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginTop="15.0dip"
+                android:background="@drawable/list_line" />
+            <LinearLayout
+                android:id="@+id/setting_version_view"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/selector_bg_pressed_white_gary_light"
+                android:paddingLeft="15.0dip"
+                android:paddingRight="15.0dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:text="当前版本"
+                    android:textColor="@color/black"
+                    android:textSize="16.0sp" />
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="50dp"
+                    android:layout_weight="1.0"
+                    android:gravity="right|center"
+                    android:text="1.0.0"
+                    android:textColor="#757575"
+                    android:textSize="16.0sp"
+                    android:id="@+id/tv_version" />
+                <com.onlinedoctor.view.BadgeView
+                    android:id = "@+id/badge_new_version"
+                    android:layout_width="10dip"
+                    android:layout_height="10dip"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="6dp"
+                    android:visibility="invisible">
+
+                </com.onlinedoctor.view.BadgeView>
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@drawable/list_line" />
+            <LinearLayout
+                android:id="@+id/setting_about_view"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/selector_bg_pressed_white_gary_light"
+                android:paddingLeft="15.0dip"
+                android:paddingRight="15.0dip" >
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:text="关于我们"
+                    android:textColor="@color/black"
+                    android:textSize="16.0sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:contentDescription="@string/content_des"
+                    android:src="@drawable/list_item_arrow" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@drawable/list_line" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginTop="20.0dip"
+                android:background="@drawable/list_line" />
+
+            <Button
+                android:id="@+id/setting_login_out_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip"
+                android:background="@drawable/selector_bg_pressed_white_gary_light"
+                android:gravity="center"
+                android:text="退出登录"
+                android:textColor="#ffff0000"
+                android:textSize="16.0sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dip"
+                android:background="@drawable/list_line" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/shadow_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/universal_shadow_height"
+        android:layout_below="@id/actionbar"
+        android:background="@drawable/shadow"/>
+
+</RelativeLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="contact_func">
+        <item>@string/title_new_patient</item>
+        <!-- <item>复诊患者</item> -->
+        <item>@string/title_label_patient</item>
+        <!--  <item>标签管理</item> -->
+
+    </array>
+    <array name="contact_icons">
+        <item>@drawable/new_patient_card_icon</item>
+        <!-- <item>@drawable/icon_newfriend</item> -->
+        <item>@drawable/label_patient_card_icon</item>
+    </array>
+
+    <array name="tool_name">
+        <item>快捷回复</item>
+        <item>门诊信息</item>
+        <item>群发助手</item>
+        <item>调查问卷</item>
+        <item>处方管理</item>
+    </array>
+
+    <array name="mine_name">
+        <item>我的主页</item>
+        <item>自定义收费</item>
+        <item>我的钱包</item>
+        <item>设置</item>
+    </array>
+    <array name="tool_icons">
+        <item>@drawable/ico_tool_fast_response</item>
+        <item>@drawable/ico_tool_clinic_time</item>
+        <item>@drawable/ico_tool_message_flood</item>
+        <item>@drawable/ico_tool_follow_template</item>
+        <item>@drawable/ico_tool_prescription</item>
+    </array>
+   	<array name="mine_icons">
+   	    <item>@drawable/ico_mine_homepage</item>
+   	    <item>@drawable/ico_mine_charging</item>
+   	    <item>@drawable/ico_mine_wallet</item>
+   	    <item>@drawable/ico_mine_setting</item>
+   	</array>
+    <!-- ChatMore page resource set -->
+    <array name="chat_more_titles1">
+        <item>图片</item>
+        <item>拍摄</item>
+        <item>快捷回复</item>
+        <item>门诊时间</item>
+        <item>二维码</item>
+        <item>自定义收费</item>
+        <item>病情调查</item>
+        <item>处方</item>
+    </array>
+    <array name="chat_more_icons1">
+        <item>@drawable/selector_more_gallery</item>
+        <item>@drawable/selector_more_camera</item>
+        <item>@drawable/selector_more_fastreply</item>
+        <item>@drawable/selector_more_clinicplan</item>
+        <item>@drawable/selector_more_card</item>
+        <item>@drawable/selector_more_minecharge</item>
+        <item>@drawable/selector_more_survey</item>
+        <item>@drawable/selector_more_chufang</item>
+    </array>
+    <array name="chat_more_titles2">
+        <item>文件</item>
+    </array>
+    <array name="chat_more_icons2">
+        <item>@drawable/selector_more_file</item>
+    </array>
+    <!-- ChatMore page resource end -->
+	
+	<array name="doctor_info">
+		    <item>姓名</item>
+		    <item>编号</item>
+		    <item>二维码名片</item>
+		    <item>权威认证</item>
+		    <item>性别</item>
+		    <item>出生日期</item>
+		    <item>邮箱</item>
+		    <item>详细地址</item>
+		    <item>介绍</item>
+	</array>
+	<array name="disease_survey_question_types">
+		<item >选择题</item>
+		<item >主观题</item>
+	</array>
+
+    <string-array name="rank">
+        <item>住院医师</item>
+        <item>主治医师</item>
+        <item>副主任</item>
+        <item>主任</item>
+    </string-array>
+
+    <array name="bank">
+        <item>农业银行</item>
+        <item>交通银行</item>
+        <item>中国银行</item>
+        <item>建设银行</item>
+        <item>光大银行</item>
+        <item>兴业银行</item>
+        <item>中信银行</item>
+        <item>招商银行</item>
+        <item>民生银行</item>
+        <item>广发银行</item>
+        <item>华夏银行</item>
+        <item>工商银行</item>
+        <item>平安银行</item>
+        <item>浦发银行</item>
+    </array>
+
+    <array name="bank_icon">
+        <item>@drawable/banklogo_abc</item>
+        <item>@drawable/banklogo_bcm</item>
+        <item>@drawable/banklogo_boc</item>
+        <item>@drawable/banklogo_ccb</item>
+        <item>@drawable/banklogo_ceb</item>
+        <item>@drawable/banklogo_cib</item>
+        <item>@drawable/banklogo_citic</item>
+        <item>@drawable/banklogo_cmb</item>
+        <item>@drawable/banklogo_cmbc</item>
+        <item>@drawable/banklogo_gdb</item>
+        <item>@drawable/banklogo_huaxia</item>
+        <item>@drawable/banklogo_icbc</item>
+        <item>@drawable/banklogo_pingan</item>
+        <item>@drawable/banklogo_spd</item>
+
+    </array>>
+</resources>

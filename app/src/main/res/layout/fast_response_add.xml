@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <com.onlinedoctor.view.CommonActionbarCancelRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:background="@drawable/list_line" />
+
+    <LinearLayout
+        android:id="@id/doctor_info_serial_view"
+        android:layout_width="fill_parent"
+        android:layout_height="200.0dip"
+        android:background="@drawable/selector_bg_pressed_white_gary_light"
+        android:clickable="true"
+        android:paddingLeft="@dimen/ui_style_guideline_length_page_space"
+        android:paddingRight="@dimen/ui_style_guideline_length_page_space" >
+
+        <EditText
+            android:id="@+id/newResponse"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:gravity="left|top"
+            android:inputType="textMultiLine"
+            android:minLines="10"
+            android:textSize="16.0sp"
+            android:background="@drawable/bg_edittext"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dip"
+        android:background="@drawable/list_line" />
+
+</LinearLayout>

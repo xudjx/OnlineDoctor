@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.onlinedoctor.view.CommonActionbarBackableRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+<!--     <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true" > -->
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffcccccc" >
+
+            <TableRow>
+
+                <TextView
+                    android:layout_height="fill_parent"
+                    android:background="#ffdfdfdd"
+                    android:gravity="center"
+                    android:layout_weight="1.0"
+                    android:padding="10.0dip"
+                    android:textColor="#ff333333"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="0.5dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffdfdfdd"
+                    android:gravity="center"
+                    android:text="上午"
+                    android:textColor="#ff333333"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="0.5dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffdfdfdd"
+                    android:gravity="center"
+                    android:text="下午"
+                    android:textColor="#ff333333"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="0.5dip"
+                    android:layout_weight="1.0"
+                    android:background="#ffdfdfdd"
+                    android:gravity="center"
+                    android:text="晚上"
+                    android:textColor="#ff333333"
+                    android:textSize="14.0sp" />
+            </TableRow>
+        </TableLayout>
+            <GridView
+        android:id="@+id/tools_grid"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:horizontalSpacing="0pt"
+        android:numColumns="4"
+        android:verticalSpacing="0pt" />
+<!--     </ScrollView> -->
+
+</LinearLayout>

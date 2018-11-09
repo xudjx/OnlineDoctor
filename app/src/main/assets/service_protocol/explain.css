@@ -1,0 +1,12 @@
+@charset "utf-8";
+*{font-family: SimSun;}
+body{margin-top: 50px;margin-bottom: 50px;}
+.handbook p{letter-spacing: 3px;font-size:20px;line-height: 30px;padding-left: 10px;padding-right: 10px;text-align:justify;text-justify:inter-ideograph;}
+.privacy p{letter-spacing: 3px;font-size:20px;line-height: 30px;padding-left: 10px;padding-right: 10px;text-align:justify;text-justify:inter-ideograph;}
+.agreement p{text-indent: 2em;letter-spacing: 3px;font-size:20px;line-height: 30px;padding-left: 10px;padding-right: 10px;text-align:justify;text-justify:inter-ideograph;}
+h3{letter-spacing: 3px;font-size:20px;line-height: 30px;padding-left: 0px;padding-right: 0px}
+h2{letter-spacing: 0px;font-size:22px;line-height: 34px;padding-left: 10px;padding-right: 50px;text-align: left}
+h1{letter-spacing: 3px;font-size:24px;line-height: 38px;padding-left: 50px;padding-right: 50px;text-align: center}
+
+.top-name{text-align: right;}
+.top-date{text-align: right;padding-right: 100px;}

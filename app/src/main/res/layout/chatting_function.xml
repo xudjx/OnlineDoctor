@@ -1,0 +1,138 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_bottom"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true" >
+
+    <RelativeLayout
+        android:id="@+id/rl_input"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:padding="5dp"
+        android:background="@drawable/chat_input_ground" >
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="@dimen/chat_send"
+            android:layout_height="@dimen/chat_input_icon"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/common_btn_blue"
+            android:text="发送"
+            android:textColor="@color/white"
+            android:textSize="@dimen/Tiny_TextSize"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_more"
+            android:layout_width="@dimen/chat_input_icon"
+            android:layout_height="@dimen/chat_input_icon"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_chat_more"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_voice"
+            android:layout_width="@dimen/chat_input_icon"
+            android:layout_height="@dimen/chat_input_icon"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/selector_voice"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_keyboard"
+            android:layout_width="@dimen/chat_input_icon"
+            android:layout_height="@dimen/chat_input_icon"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/selector_keyboard"
+            android:visibility="invisible" />
+
+        <RelativeLayout android:id="@+id/edit_layout"
+            android:layout_width="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_height="@dimen/chat_input_icon"
+            android:layout_marginRight="2dp"
+            android:layout_toLeftOf="@id/btn_send"
+            android:layout_toRightOf="@id/btn_voice">
+
+            <Button
+                android:id="@+id/btn_expression"
+                android:layout_width="@dimen/chat_input_expression"
+                android:layout_height="@dimen/chat_input_expression"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/selector_expression"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/et_sendmessage"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/chat_input_icon"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/btn_expression"
+                android:background="@color/white"
+                android:inputType="textMultiLine"
+                android:singleLine="false"
+                android:scrollHorizontally="false"
+                android:textSize="18sp"/>
+
+            <View android:id="@+id/line_view"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/chat_background"/>
+
+        </RelativeLayout>
+
+        <com.onlinedoctor.view.RecordButton
+            android:id="@+id/btn_record"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/chat_input_icon"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/btn_more"
+            android:layout_toRightOf="@id/btn_keyboard"
+            android:singleLine="true"
+            android:textSize="16sp"
+            android:background="@drawable/rect"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_input"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <ViewStub
+            android:id="@+id/chat_more_view"
+            android:layout_width="fill_parent"
+            android:layout_height="230dp"
+            android:background="@color/white"
+            android:layout="@layout/chatting_more_view"
+            android:visibility="gone" />
+
+        <ViewStub
+            android:id="@+id/chat_face_view"
+            android:layout_width="fill_parent"
+            android:layout_height="230dp"
+            android:background="@color/white"
+            android:layout="@layout/custom_facerelativelayout"
+            android:visibility="gone" />
+    </LinearLayout>
+</RelativeLayout>

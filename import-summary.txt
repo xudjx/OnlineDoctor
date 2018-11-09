@@ -1,0 +1,81 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Risky Project Location:
+-----------------------
+The tools *should* handle project locations in any directory. However,
+due to bugs, placing projects in directories containing spaces in the
+path, or characters like ", ' and &, have had issues. We're working to
+eliminate these bugs, but to save yourself headaches you may want to
+move your project to a location where this is not a problem.
+/Users/xuweidong/Documents/Open source projects/OnlineDoctor1
+                               -      -                      
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .DS_Store
+* ic_launcher-web.png
+* proguard-project.txt
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:19.1.0
+gson-2.3.1.jar => com.google.code.gson:gson:2.3.1
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app/src/main/AndroidManifest.xml
+* assets/ => app/src/main/assets/
+* libs/MobTools.jar => app/libs/MobTools.jar
+* libs/SMSSDK-1.2.0.jar => app/libs/SMSSDK-1.2.0.jar
+* libs/androidannotations-api-3.0.1.jar => app/libs/androidannotations-api-3.0.1.jar
+* libs/arm64-v8a/libsmssdk.so => app/src/main/jniLibs/arm64-v8a/libsmssdk.so
+* libs/armeabi-v7a/libsmssdk.so => app/src/main/jniLibs/armeabi-v7a/libsmssdk.so
+* libs/armeabi/libsmssdk.so => app/src/main/jniLibs/armeabi/libsmssdk.so
+* libs/jetty-all-9.2.9.v20150224.jar => app/libs/jetty-all-9.2.9.v20150224.jar
+* libs/json-20140107.jar => app/libs/json-20140107.jar
+* libs/mframework.jar => app/libs/mframework.jar
+* libs/mips/libsmssdk.so => app/src/main/jniLibs/mips/libsmssdk.so
+* libs/mips64/libsmssdk.so => app/src/main/jniLibs/mips64/libsmssdk.so
+* libs/pinyin4j-2.5.0.jar => app/libs/pinyin4j-2.5.0.jar
+* libs/universal-image-loader-1.9.3.jar => app/libs/universal-image-loader-1.9.3.jar
+* libs/x86/libsmssdk.so => app/src/main/jniLibs/x86/libsmssdk.so
+* libs/x86_64/libsmssdk.so => app/src/main/jniLibs/x86_64/libsmssdk.so
+* lint.xml => app/lint.xml
+* res/ => app/src/main/res/
+* src/ => app/src/main/java/
+* src/.DS_Store => app/src/main/resources/.DS_Store
+* src/com/.DS_Store => app/src/main/resources/com/.DS_Store
+* src/com/onlinedoctor/.DS_Store => app/src/main/resources/com/onlinedoctor/.DS_Store
+* src/com/onlinedoctor/pojo/.DS_Store => app/src/main/resources/com/onlinedoctor/pojo/.DS_Store
+* yixingzhe.PNG => yixingzhe.png
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

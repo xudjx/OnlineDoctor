@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="gray">#636363</color>
+    <color name="blue">#499BF7</color>
+    <color name="green">#98FB98</color>
+    <!-- 浅灰色 -->
+    <color name="light_gray">#ffbbbbbb</color>
+	<color name="test_secondary_text">#ffbbbbbb</color>
+	<color name="test_primary_text">#ff6f6f6f</color>
+	<color name="divide_line">#CBCED2</color>
+	
+	<color name="gray_font">#818181</color>
+	
+	<color name="gray_light_light">#fff0f0f0</color> 
+	<color name="doctor_info_value">#ff666666</color>
+	<color name="title_color">#ff0288ce</color>
+	
+	<color name="bg_gray_color">#fff1f0f5</color>
+	<color name="red">#CD0000</color>
+	
+	<color name="trans_black">#aa000000</color>
+    <color name="color_icon_text_pressed">#ff00aeff</color>
+    <color name="color_icon_text">#ffffffff</color>
+
+	<color name="title_blue">#23a9ff</color>
+	<color name="main_bottom">#fafafa</color>
+
+	<!-- Theme colors -->
+	<color name="colorPrimary">#536dfe</color>
+	<color name="colorPrimaryDark">#3f51b5</color>
+	<color name="colorAccent">#23a9ff</color>
+	<color name="theme_accent">@color/colorAccent</color>
+
+	<!-- general colors for drawer -->
+	<color name="list_background">#F2F2F2</color>
+	<!-- primary colors for drawer -->
+	<color name="list_background_normal">#FCFCFC</color>
+	<!-- secondary colors for drawer -->
+	<color name="list_background_secondary_normal">#F2F2F2</color>
+
+	<!-- 问诊界面相关的颜色值 -->
+	<color name="chat_name_black">#212121</color>
+	<color name="chat_message_gray">#757575</color>
+	<color name="chat_label_gray">#bababa</color>
+	<color name="chat_card_background">#fdfdfd</color>
+	<color name="chat_background">#ebe9ea</color>
+	<color name="chat_input">#fdfdfd</color>
+
+	<color name="withcard_background">#c9e6f4</color>
+
+	<!-- 患者界面相关的颜色值 -->
+	<color name="patient_title_blue">#23a9ff</color>
+	<color name="label_back_white">#FFFAFAFA</color>
+
+	<!-- 患者详情 -->
+	<color name="time_line">#AAB7C8</color>
+	<color name="chakan">#23a9ff</color>
+
+	<color name="font">#212121</color>
+	<color name="font_sub">#757575</color>
+	<color name="font_sub_sub">#bababa</color>
+	<color name="trans_font_sub_sub">#7fbababa</color>
+
+	<color name="btn_blue">#23a9e6</color>
+	<color name="gray_blue">#ff84caf7</color>
+
+	<!--工具背景颜色 -->
+	<color name="tool_background">#ebe9ea</color>
+
+</resources>

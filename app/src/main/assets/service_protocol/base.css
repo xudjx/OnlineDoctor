@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS base */
+
+/* RESET */
+html {background: none repeat scroll 0 0 #FFFFFF; color: #000;}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, u, i, center, ul, li, ol, dl, dt, dd, fieldset, form, label, legend, table, caption, tbody, tfoot, thead { background: none repeat scroll 0 0 transparent;border:0 none;font-size: 100%;margin:0;outline:0 none;padding:0;vertical-align: middle;}
+
+abbr, acronym, address, caption, cite, code, dfn, em, th, var, h1, h2, h3, h4, h5, h6 {font-style: normal;font-variant: normal; font-weight: normal;}
+
+input, textarea, select, optgroup, option, button {background:none repeat scroll 0 0 #FFFFFF;font-size:100%;margin:0; padding:0;
+font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
+
+
+/* SHARE LAYOUT */
+html {height: 100%;overflow: auto;}
+body {line-height: 1;}
+ol, ul, li {list-style: none outside none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: none;}
+:focus {outline: 0 none;}
+ins {text-decoration: none;}
+del { text-decoration: line-through;}
+table {border-collapse: collapse;border-spacing: 0;}
+caption, th, td { text-align: left;}
+
+.clear { clear: both; }
+.clearer { clear: both; display: block; margin: 0; padding: 0; height: 0; line-height: 1px; font-size: 1px; }

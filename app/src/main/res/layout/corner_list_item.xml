@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="2dp">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height= "wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/new_patient_card"
+            android:background="@color/white"
+            android:clickable="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="@dimen/card_divide_margin"
+            android:layout_marginTop="@dimen/card_divide_margin"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            card_view:cardElevation="@dimen/patient_list_shadow">
+            <RelativeLayout
+                android:id="@+id/new_patient_layout"
+                android:layout_gravity="center"
+                android:layout_height="fill_parent"
+                android:background="@drawable/selector_card_item"
+                android:layout_width="fill_parent">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    >
+                    <ImageView
+                        android:id="@+id/new_patient_card_icon"
+                        android:src="@drawable/new_patient_card_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp" />
+
+                    <TextView
+                        android:id="@+id/new_patient_card_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/new_patient_card_icon"
+                        android:text="@string/title_new_patient"
+                        android:textColor="@color/patient_title_blue"
+                        android:textSize="@dimen/Small_Tiny_TextSize"/>
+                </RelativeLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/label_patient_card"
+            android:background="@color/white"
+            android:clickable="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginBottom="@dimen/card_divide_margin"
+            android:layout_marginTop="@dimen/card_divide_margin"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            card_view:cardElevation="@dimen/patient_list_shadow">
+            <RelativeLayout
+                android:layout_gravity="center"
+                android:layout_height="fill_parent"
+                android:background="@drawable/selector_card_item"
+                android:layout_width="fill_parent">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true">
+                    <ImageView
+                        android:id="@+id/label_patient_card_icon"
+                        android:src="@drawable/label_patient_card_icon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp" />
+
+                    <TextView
+                        android:id="@+id/label_patient_card_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/label_patient_card_icon"
+                        android:text="@string/title_label_patient"
+                        android:textColor="@color/patient_title_blue"
+                        android:textSize="@dimen/Small_Tiny_TextSize"/>
+                </RelativeLayout>
+            </RelativeLayout>
+         </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</LinearLayout>

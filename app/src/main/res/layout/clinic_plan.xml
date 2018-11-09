@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+    
+    <com.onlinedoctor.view.CommonActionbarBackableRelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_below="@id/actionbar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="20dp"
+        android:fillViewport="true" >
+
+        <TableLayout
+            android:id="@+id/clinic_plan_tl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+             >
+
+            <TableRow>
+
+                <TextView
+                    android:layout_height="fill_parent"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:padding="10.0dip"
+                    android:textColor="#ff333333"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="0.0dip"
+                    android:layout_weight="1.0"
+                    
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="上午"
+                    android:textColor="@color/gray_font"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="0.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="下午"
+                    android:textColor="@color/gray_font"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="0.0dip"
+                    android:layout_weight="1.0"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="晚上"
+                    android:textColor="@color/gray_font"
+                    android:textSize="14.0sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_height="68.0dip"
+                android:layout_marginTop="0.0dip" >
+
+                <TextView
+                    android:id="@+id/mon"
+                    style="@style/clinic_plan_column_week"
+                    android:text="周一" />
+
+
+                <TextView
+                    android:id="@id/clinic_mo_am_ccb"
+                    style="@style/center_check_box_clinic_plan" />
+
+                <include layout="@layout/divider_vertical"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    />
+
+
+                <TextView
+                    android:id="@id/clinic_mo_pm_ccb"
+                    style="@style/center_check_box_clinic_plan" />
+
+                <include layout="@layout/divider_vertical"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <TextView
+                    android:id="@id/clinic_mo_night_ccb"
+                    style="@style/center_check_box_clinic_plan" />
+            </TableRow>
+
+            <View
+                android:layout_height="1dip"
+                android:background="#2F7F7F7F"
+                android:layout_marginLeft="60dp"/>
+
+            <TableRow
+                android:layout_height="68.0dip"
+                android:layout_marginTop="0.0dip" >
+
+                <TextView
+                    android:id="@+id/tues"
+                    style="@style/clinic_plan_column_week"
+                    android:text="周二" />
+
+                <TextView
+                    android:id="@id/clinic_tu_am_ccb"
+                    style="@style/center_check_box_clinic_plan" />
+
+                <include layout="@layout/divider_vertical"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    />
+
+                <TextView
+                    android:id="@id/clinic_tu_pm_ccb"
+                    style="@style/center_check_box_clinic_plan" />
+
+                <include layout="@layout/divider_vertical"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    />
+
+                <TextView
+                    android:id="@id/clinic_tu_night_ccb"
+                    style="@style/center_check_box_clinic_plan" />
+            </TableRow>
+
+            <View
+                android:layout_height="1dip"
+                android:background="#2F7F7F7F"
+                android:layout_marginLeft="60dp"/>
+
+            <TableRow
+                android:layout_height="68.0dip"
+                android:layout_marginTop="0.0dip" >
+
+                <TextView
+                    android:id="@+id/web"
+                    style="@style/clinic_plan_column_week"
+                    android:text="周三" />
+
+                <TextView
+                    android:id="@id/clinic_we_am_ccb"
+                    style="@style/center_check_box_clinic_plan" />
+
+                <include layout="@layout/divider_vertical"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+
+                    />
+
+                <TextView
+                    android:id="@id/clinic_we_pm_ccb"
+                    style="@style/center_check_box_clinic_plan" />
+
+                <include layout="@layout/divider_vertical"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    />
+
+                <TextView
+                    android:id="@id/clinic_we_night_ccb"
+                    style="@style/center_check_box_clinic_plan" />
+            </TableRow>
+
+            <View
+                android:layout_height="1dip"
+                android:background="#2F7F7F7F"
+                android:layout_marginLeft="60dp"/>
+
+            <TableRow
+                android:layout_height="68.0dip"
+                android:layout_marginTop="0.0dip" >
+
+                <TextView
+                    android:id="@+id/thur"
+                    style="@style/clinic_plan_column_week"
+                    android:text="周四" />
+
+
+                <TextView
+                    android:id="@id/clinic_th_am_ccb"
+                    style="@style/center_check_box_clinic_plan" />
+
+                <include layout="@layout/divider_vertical"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    />
+
+                <TextView
+                    android:id="@id/clinic_th_pm_ccb"
+                    style="@style/center_check_box_clinic_plan" />
+
+                <include layout="@layout/divider_vertical"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    />
+
+                <TextView
+                    android:id="@id/clinic_th_night_ccb"
+                    style="@style/center_check_box_clinic_plan" />
+            </TableRow>
+
+            <View
+                android:layout_height="1dip"
+                android:background="#2F7F7F7F"
+                android:layout_marginLeft="60dp"/>
+
+            <TableRow
+                android:layout_height="68.0dip"
+                android:layout_marginTop="0.0dip" >
+
+                <TextView
+                    android:id="@+id/fri"
+                    style="@style/clinic_plan_column_week"
+                    android:text="周五" />
+
+                <TextView
+                    android:id="@id/clinic_fr_am_ccb"
+                    style="@style/center_check_box_clinic_plan" />
+
+                <include layout="@layout/divider_vertical"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    />
+
+                <TextView
+                    android:id="@id/clinic_fr_pm_ccb"
+                    style="@style/center_check_box_clinic_plan" />
+
+                <include layout="@layout/divider_vertical"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    />
+
+                <TextView
+                    android:id="@id/clinic_fr_night_ccb"
+                    style="@style/center_check_box_clinic_plan" />
+            </TableRow>
+
+            <View
+                android:layout_height="1dip"
+                android:background="#2F7F7F7F"
+                android:layout_marginLeft="60dp"/>
+
+            <TableRow
+                android:layout_height="68.0dip"
+                android:layout_marginTop="0.0dip" >
+
+                <TextView
+                    android:id="@+id/sat"
+                    style="@style/clinic_plan_column_week"
+                    android:text="周六" />
+                <TextView
+                    android:id="@id/clinic_sa_am_ccb"
+                    style="@style/center_check_box_clinic_plan" />
+
+                <include layout="@layout/divider_vertical"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    />
+
+                <TextView
+                    android:id="@id/clinic_sa_pm_ccb"
+                    style="@style/center_check_box_clinic_plan" />
+
+                <include layout="@layout/divider_vertical"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    />
+
+                <TextView
+                    android:id="@+id/clinic_sa_night_ccb"
+                    style="@style/center_check_box_clinic_plan" />
+
+
+            </TableRow>
+
+            <View
+                android:layout_height="1dip"
+                android:background="#2F7F7F7F"
+                android:layout_marginLeft="60dp"/>
+
+            <TableRow
+                android:layout_height="68.0dip"
+                android:layout_marginTop="0.0dip" >
+
+                <TextView
+                    android:id="@+id/sun"
+                    style="@style/clinic_plan_column_week"
+                    android:text="周日" />
+                <TextView
+                    android:id="@id/clinic_su_am_ccb"
+                    style="@style/center_check_box_clinic_plan" />
+
+                <include layout="@layout/divider_vertical"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <TextView
+                    android:id="@id/clinic_su_pm_ccb"
+                    style="@style/center_check_box_clinic_plan" />
+
+                <include layout="@layout/divider_vertical"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <TextView
+                    android:id="@id/clinic_su_night_ccb"
+                    style="@style/center_check_box_clinic_plan" />
+
+
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/shadow_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/universal_shadow_height"
+        android:layout_below="@id/actionbar"
+        android:background="@drawable/shadow"/>
+
+</RelativeLayout>

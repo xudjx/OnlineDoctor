@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.onlinedoctor.activity"
+        minSdkVersion 16
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    //这个是解决lint报错的代码
+    lintOptions {
+        abortOnError false
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:22.+'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.android.support:recyclerview-v7:22.2.0'
+    compile 'com.android.support:cardview-v7:22.2.0'
+    compile('com.mikepenz:materialdrawer:3.0.9@aar') {
+        transitive = true
+    }
+    compile 'com.facebook.rebound:rebound:0.3.6'
+    compile files('libs/MobTools.jar')
+//    compile files('libs/SMSSDK-1.2.0.jar')
+
+    compile files('libs/MobLogCollector.jar')
+    compile files('libs/SMSSDK-1.3.1.jar')
+
+    compile files('libs/androidannotations-api-3.0.1.jar')
+    compile files('libs/Java-WebSocket-1.3.0.jar')
+    compile files('libs/json-20140107.jar')
+    compile files('libs/mframework.jar')
+    compile files('libs/pinyin4j-2.5.0.jar')
+    compile 'com.intellij:annotations:12.0'
+    compile project(':Photoviewlibrary')
+    compile project(':mediapicker')
+    //compile project(':uikit')
+    compile project(':qiniulibrary')
+    compile project(':galleryfinal')
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@drawable/frame_up_round_corner"
+    android:text="升级提醒"
+    android:textSize="20sp"
+    android:gravity="center"
+    android:textColor="@color/white"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="149dp"
+        android:background="#EEEEEE"
+        android:padding="10dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp">
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:padding="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:background="@color/white"
+        android:textColor="#757575"
+        android:text="1.我们我们我们我们我们我们我们我们我们我们我们我们\n2.我们我们我们我们我们我们我们我们我们我们我们我们\n3.我们我们我们我们我们我们我们我们我们我们我们我们"
+        />
+    </RelativeLayout>
+    <include
+        layout = "@layout/divider"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@drawable/frame_bottom_round_corner">
+        <Button
+            android:id = "@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="取消"
+            android:textColor="#979797"
+            android:background="@null"/>
+        <include
+            layout = "@layout/divider_vertical"/>
+        <Button
+            android:id = "@+id/btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="确认"
+            android:textColor="#23A9FF"
+            android:background="@null"/>
+    </LinearLayout>
+</LinearLayout>

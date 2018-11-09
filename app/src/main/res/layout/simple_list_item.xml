@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/forwardcarditem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/activity_card_margin"
+    android:background="@color/white"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_card_item"
+        android:gravity="center_vertical|left"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/chat_card_padding_vertical"
+        android:paddingLeft="@dimen/chat_card_padding_horizontal"
+        android:paddingRight="@dimen/chat_card_padding_horizontal"
+        android:paddingTop="@dimen/chat_card_padding_vertical">
+
+        <TextView
+            android:id="@+id/choose_patient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="选择患者"
+            android:textColor="@color/font"
+            android:textSize="@dimen/chat_name_dimen"/>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

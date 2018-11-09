@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="230dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:background="@drawable/pop_link_right"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="12dp"
+    android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/link_title_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical|left"
+            android:singleLine="true"
+            android:text="某某医生的二维码"
+            android:textColor="@color/font"
+            android:textSize="@dimen/chat_name_dimen"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/link_image_right"
+            android:layout_width="@dimen/image_dimen"
+            android:layout_height="@dimen/image_dimen"
+            android:layout_below="@id/link_title_right"
+            android:layout_alignParentLeft="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/user_default"
+            android:transitionName="faceImage"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/link_description_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/link_image_right"
+            android:layout_below="@id/link_title_right"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/link_image_right"
+            android:gravity="top|left"
+            android:maxLines="4"
+            android:maxWidth="150dp"
+            android:paddingBottom="5dp"
+            android:singleLine="false"
+            android:text="这是医生的二维码名片"
+            android:textColor="@color/font"
+            android:textSize="@dimen/chat_message_dimen"
+            android:visibility="visible" />
+</RelativeLayout>

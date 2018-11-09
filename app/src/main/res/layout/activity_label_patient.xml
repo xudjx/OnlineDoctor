@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_title" >
+
+        <TextView
+            android:id="@+id/labelPatientTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/Small_TextSize" />
+
+    </LinearLayout>
+
+    <com.onlinedoctor.view.SearchEditText
+        android:id="@+id/searchLabelPatient"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_margin="3dip"
+        android:background="@drawable/search_bar_edit_selector"
+        android:drawableLeft="@drawable/actionbar_search_icon"
+        android:hint="@string/tip_search_contact"
+        android:singleLine="true"
+        android:textColor="#000" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="?android:attr/listDivider" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ListView
+            android:id="@+id/labelPatientList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false" />
+        
+        <TextView
+            android:id="@+id/labelPatientDialog"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_gravity="center"
+            android:background="@drawable/voip_toast_bg" 
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="30.0dip"
+            android:visibility="invisible" />
+
+        <com.onlinedoctor.view.PatientSideBar
+            android:id="@+id/labelPatientSidebar"
+            android:layout_width="30.0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center" />
+    </FrameLayout>
+</LinearLayout>

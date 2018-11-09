@@ -1,0 +1,202 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+
+    <style name="Theme_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="chat_text_date_style">
+        <item name="android:padding">2dp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:background">@color/trans_font_sub_sub</item>
+    </style>
+
+    <style name="chat_content_data_style_left">
+        <item name="android:minHeight">50dp</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:textColor">@color/font</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="chat_content_data_style_right">
+        <item name="android:minHeight">50dp</item>
+        <item name="android:gravity">right|center</item>
+        <item name="android:textColor">@color/font</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+
+    <style name="chat_voice_style_left">
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="chat_voice_style_right">
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="chat_text_name_style">
+        <item name="android:textColor">#818181</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Dialogstyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <!-- 显示对话框时当前的屏幕是否变暗 -->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="clinic_plan_column_week">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:padding">15.0dip</item>
+        <item name="android:textColor">@color/gray_font</item>
+        <item name="android:layout_height">65.0dip</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="center_check_box_clinic_plan">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:lines">3</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:textSize">12sp</item>
+
+    </style>
+
+    <style name="AppBaseTheme" parent="android:Theme.Light"></style>
+
+    <style name="text_actionbar_title_style">
+        <item name="android:textSize">@dimen/ui_style_guideline_text_size_actionbar_title</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/actionbar_height</item>
+        <item name="android:maxWidth">@dimen/width_size_actionbar_title</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="text_actionbar_back_style">
+        <item name="android:textSize">@dimen/ui_style_guideline_text_size_actionbar_item</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">3.0dip</item>
+        <item name="android:paddingRight">10.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:text">"返回"</item>
+        <item name="android:drawableLeft">@drawable/selector_ico_back_left</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="text_actionbar_item_tv_style">
+        <item name="android:textSize">@dimen/ui_style_guideline_text_size_actionbar_item</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">@dimen/ui_style_guideline_length_page_space</item>
+        <item name="android:paddingRight">@dimen/ui_style_guideline_length_page_space</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="text_actionbar_item_ibtn_style">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@null</item>
+        <item name="android:paddingLeft">@dimen/ui_style_guideline_length_page_space</item>
+        <item name="android:paddingRight">@dimen/ui_style_guideline_length_page_space</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
+    <style name="IMTheme_Transparent">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="Icon">
+        <item name="android:textColor">@color/selector_color_icon</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">80.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="TextView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginBottom">18dp</item>
+    </style>
+
+
+    <style name="TextView.Primary">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TextView.Secondary">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TextView.Ridiculous">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">40sp</item>
+    </style>
+
+    <style name="TextView.Green">
+        <item name="android:textColor">@color/green</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="TextView.Blue">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="button_disable">
+        <item name="android:background">#FFAAE3A4</item>
+    </style>
+
+    <style name="button_enable">
+        <item name="android:background">#FF33AF29</item>
+    </style>
+
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_style</item>
+    </style>
+
+    <style name="AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+</resources>

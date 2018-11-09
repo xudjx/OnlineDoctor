@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/chat_card_padding_horizontal"
+    android:gravity="left"
+    android:orientation="vertical"
+    android:padding="3dp">
+
+    <TextView
+        android:id="@+id/tv_sendtime_left"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        android:text="2015/06/20"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/charge_response_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_sendtime_left"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:background="@color/trans_font_sub_sub"
+        android:clickable="true"
+        android:focusable="false"
+        android:gravity="center_horizontal"
+        android:padding="1dp"
+        android:visibility="gone">
+        <!-- 收费信息回复显示 -->
+        <ImageView
+            android:id="@+id/card"
+            android:layout_width="16dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/card_small" />
+
+        <TextView
+            android:id="@+id/charge_response"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/card"
+            android:gravity="center_vertical"
+            android:text="老东东支付了你的项目"
+            android:textColor="@color/white"
+            android:textSize="@dimen/chat_message_dimen" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tv_sendtime_left"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/tv_userhead_left"
+            android:layout_width="@dimen/chat_head_icon"
+            android:layout_height="@dimen/chat_head_icon"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:focusable="false"
+            android:scaleType="fitXY"
+            android:src="@drawable/chat_mini_default_face"
+            android:transitionName="faceImage"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/message_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/tv_userhead_left">
+
+            <TextView
+                android:id="@+id/tv_chatcontent_left"
+                style="@style/chat_content_data_style_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/chatfrom_bg"
+                android:maxWidth="250dp"
+                android:minHeight="@dimen/chat_head_icon"
+                android:paddingBottom="5dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="8dp"
+                android:paddingTop="10dp"
+                android:text="测测试据局测试数据局"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/tv_image_left"
+                style="@style/chat_content_data_style_left"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/chatfrom_bg"
+                android:gravity="right|center_vertical"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/link_layout_left"
+                android:layout_width="230dp"
+                android:layout_height="115dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/chatfrom_bg"
+                android:gravity="right|center_vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/link_title_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical|left"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="某某医生的二维码"
+                    android:textColor="@color/font"
+                    android:textSize="@dimen/chat_name_dimen"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/link_image_left"
+                    android:layout_width="@dimen/image_dimen"
+                    android:layout_height="@dimen/image_dimen"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/link_title_left"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/user_default"
+                    android:transitionName="faceImage"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/link_description_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignBaseline="@id/link_image_left"
+                    android:layout_below="@id/link_title_left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/link_image_left"
+                    android:gravity="top|left"
+                    android:maxLines="4"
+                    android:maxWidth="150dp"
+                    android:singleLine="false"
+                    android:text="测试数据: 这是医生的二维码"
+                    android:textColor="@color/font"
+                    android:textSize="@dimen/chat_message_dimen"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/voice_layout_left"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chatfrom_bg"
+                android:minHeight="@dimen/chat_head_icon"
+                android:paddingBottom="2dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="8dp"
+                android:paddingTop="5dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/tv_voiceView_left"
+                    style="@style/chat_voice_style_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/voice_pup_left"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <ProgressBar
+                android:id="@+id/image_bar_left"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:indeterminateDrawable="@drawable/frame_loading"
+                android:indeterminateDuration="1800"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/status_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/message_layout">
+
+            <ProgressBar
+                android:id="@+id/message_bar_left"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_time_left"
+                style="@style/chat_content_data_style_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="7&apos;89&apos;&apos;"
+                android:textColor="@color/font_sub_sub"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/send_status_view_left"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tv_time_left"
+                android:src="@drawable/selector_sendfailed"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/voice_unread_left"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tv_time_left"
+                android:src="@drawable/msg_unread"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

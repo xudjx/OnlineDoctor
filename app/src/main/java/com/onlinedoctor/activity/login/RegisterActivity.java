@@ -1,0 +1,273 @@
+/*
+ * 瀹???扮?:http://www.mob.com
+ * ???????Q: 4006852216
+ * 瀹??寰?俊:ShareSDK   锛?????甯????????锛??浠??浼??涓??堕????寰?俊灏??????板?瀹规?????ㄣ?????娇?ㄨ?绋?腑??换浣??棰??涔??浠ラ???寰?俊涓??浠??寰??绯伙???滑灏????24灏?????浜??澶??
+ *
+ * Copyright (c) 2014骞? mob.com. All rights reserved.
+ */
+package com.onlinedoctor.activity.login;
+
+import java.util.HashMap;
+import java.util.Random;
+
+import android.app.Activity;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Handler.Callback;
+import android.os.Message;
+import android.text.TextUtils;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+import cn.smssdk.EventHandler;
+import cn.smssdk.SMSSDK;
+import cn.smssdk.gui.CommonDialog;
+import cn.smssdk.gui.RegisterPage;
+
+import com.onlinedoctor.activity.R;
+import com.onlinedoctor.pojo.Common;
+import com.umeng.analytics.MobclickAgent;
+
+public class RegisterActivity extends Activity implements OnClickListener, Callback {
+	// 濉??浠??淇?DK搴?????娉ㄥ?寰????PPKEY
+	private static final String APPKEY = Common.MOB_APP_KEY;
+
+	// 濉??浠??淇?DK搴?????娉ㄥ?寰????PPSECRET
+	private static final String APPSECRET = Common.MOB_APP_SECRET;
+
+
+	// ??俊娉ㄥ?锛???轰骇??ご??
+	private static final String[] AVATARS = {
+		"http://tupian.qqjay.com/u/2011/0729/e755c434c91fed9f6f73152731788cb3.jpg",
+		"http://99touxiang.com/public/upload/nvsheng/125/27-011820_433.jpg",
+		"http://img1.touxiang.cn/uploads/allimg/111029/2330264224-36.png",
+		"http://img1.2345.com/duoteimg/qqTxImg/2012/04/09/13339485237265.jpg",
+		"http://diy.qqjay.com/u/files/2012/0523/f466c38e1c6c99ee2d6cd7746207a97a.jpg",
+		"http://img1.touxiang.cn/uploads/20121224/24-054837_708.jpg",
+		"http://img1.touxiang.cn/uploads/20121212/12-060125_658.jpg",
+		"http://img1.touxiang.cn/uploads/20130608/08-054059_703.jpg",
+		"http://diy.qqjay.com/u2/2013/0422/fadc08459b1ef5fc1ea6b5b8d22e44b4.jpg",
+		"http://img1.2345.com/duoteimg/qqTxImg/2012/04/09/13339510584349.jpg",
+		"http://img1.touxiang.cn/uploads/20130515/15-080722_514.jpg",
+		"http://diy.qqjay.com/u2/2013/0401/4355c29b30d295b26da6f242a65bcaad.jpg"
+	};
+
+	private boolean ready;
+	private Dialog pd;
+	private TextView tvNum;
+
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.smssdk_main_activity);
+		Button btnRegist = (Button) findViewById(R.id.btn_bind_phone);
+//		View btnContact = findViewById(R.id.rl_contact);
+//		tvNum = (TextView) findViewById(R.id.tv_num);
+//		tvNum.setVisibility(View.GONE);
+		btnRegist.setOnClickListener(this);
+//		btnContact.setOnClickListener(this);
+
+//		loadSharePrefrence();
+//		showAppkeyDialog();
+		initSDK();
+		
+	}
+
+	private void showAppkeyDialog() {
+		final Dialog dialog = new Dialog(this, R.style.CommonDialog);
+		dialog.setContentView(R.layout.smssdk_set_appkey_dialog);
+		final EditText etAppKey = (EditText) dialog.findViewById(R.id.et_appkey);
+		etAppKey.setText(APPKEY);
+		final EditText etAppSecret = (EditText) dialog.findViewById(R.id.et_appsecret);
+		etAppSecret.setText(APPSECRET);
+		OnClickListener ocl = new OnClickListener() {
+			public void onClick(View v) {
+				if (v.getId() == R.id.btn_dialog_ok) {
+					//APPKEY = etAppKey.getText().toString().trim();
+					//APPSECRET = etAppSecret.getText().toString().trim();
+					if (TextUtils.isEmpty(APPKEY) || TextUtils.isEmpty(APPSECRET)) {
+						Toast.makeText(v.getContext(), R.string.smssdk_appkey_dialog_title,
+								Toast.LENGTH_SHORT).show();
+					} else {
+						dialog.dismiss();
+						setSharePrefrence();
+						initSDK();
+					}
+				} else {
+					dialog.dismiss();
+					finish();
+				}
+			}
+		};
+		dialog.findViewById(R.id.btn_dialog_ok).setOnClickListener(ocl);
+		dialog.findViewById(R.id.btn_dialog_cancel).setOnClickListener(ocl);
+		dialog.setCancelable(false);
+		dialog.show();
+	}
+
+	private void initSDK() {
+		// ??????淇?DK
+		SMSSDK.initSDK(this, APPKEY, APPSECRET);
+		final Handler handler = new Handler(this);
+		EventHandler eventHandler = new EventHandler() {
+			public void afterEvent(int event, int result, Object data) {
+				Message msg = new Message();
+				msg.arg1 = event;
+				msg.arg2 = result;
+				msg.obj = data;
+				handler.sendMessage(msg);
+			}
+		};
+		// 娉ㄥ????????ュ?
+		SMSSDK.registerEventHandler(eventHandler);
+		ready = true;
+
+		// ?峰??板ソ??釜??
+		showDialog();
+		SMSSDK.getNewFriendsCount();
+
+	}
+
+	private void loadSharePrefrence() {
+		SharedPreferences p = getSharedPreferences("SMSSDK_SAMPLE", Context.MODE_PRIVATE);
+		//APPKEY = p.getString("APPKEY", APPKEY);
+		//APPSECRET = p.getString("APPSECRET", APPSECRET);
+	}
+
+	private void setSharePrefrence() {
+		SharedPreferences p = getSharedPreferences("SMSSDK_SAMPLE", Context.MODE_PRIVATE);
+		Editor edit = p.edit();
+		edit.putString("APPKEY", APPKEY);
+		edit.putString("APPSECRET", APPSECRET);
+		edit.commit();
+	}
+
+	protected void onDestroy() {
+		if (ready) {
+			// ??姣??璋???????
+			SMSSDK.unregisterAllEventHandler();
+		}
+		super.onDestroy();
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		if (ready) {
+			// ?峰??板ソ??釜??
+			showDialog();
+			SMSSDK.getNewFriendsCount();
+		}
+		MobclickAgent.onResume(this);
+	}
+
+	@Override
+	protected void onPause() {
+		super.onPause();
+		MobclickAgent.onPause(this);
+	}
+
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.btn_bind_phone:
+			// ???娉ㄥ?椤甸?
+			RegisterPage registerPage = new RegisterPage();
+			registerPage.setRegisterCallback(new EventHandler() {
+				public void afterEvent(int event, int result, Object data) {
+					// 瑙ｆ?娉ㄥ?缁??
+					if (result == SMSSDK.RESULT_COMPLETE) {
+						@SuppressWarnings("unchecked")
+						HashMap<String,Object> phoneMap = (HashMap<String, Object>) data;
+						String country = (String) phoneMap.get("country");
+						String phone = (String) phoneMap.get("phone");
+						String password = (String) phoneMap.get("password");
+						Log.i("password", password);
+						
+						// ??氦?ㄦ?淇℃?
+						registerUser(country, phone, password);
+					}
+				}
+			});
+			registerPage.show(this);
+			break;
+//		case R.id.rl_contact:
+//			tvNum.setVisibility(View.GONE);
+//			// ?????俊褰?ソ???琛ㄩ〉??
+//			ContactsPage contactsPage = new ContactsPage();
+//			contactsPage.show(this);
+//			break;
+		}
+	}
+	
+	public boolean handleMessage(Message msg) {
+		if (pd != null && pd.isShowing()) {
+			pd.dismiss();
+		}
+
+		int event = msg.arg1;
+		int result = msg.arg2;
+		Object data = msg.obj;
+		if (event == SMSSDK.EVENT_SUBMIT_USER_INFO) {
+			// ??俊娉ㄥ???????杩??MainActivity,?跺???ず?板ソ??
+			if (result == SMSSDK.RESULT_COMPLETE) {
+				Toast.makeText(this, R.string.smssdk_user_info_submited, Toast.LENGTH_SHORT).show();
+			} else {
+				((Throwable) data).printStackTrace();
+			}
+		} else if (event == SMSSDK.EVENT_GET_NEW_FRIENDS_COUNT){
+			if (result == SMSSDK.RESULT_COMPLETE) {
+				//refreshViewCount(data);
+			} else {
+				((Throwable) data).printStackTrace();
+			}
+		}
+		return false;
+	}
+	// ?存?锛??濂藉?涓??
+	private void refreshViewCount(Object data){
+		int newFriendsCount = 0;
+		try {
+			newFriendsCount = Integer.parseInt(String.valueOf(data));
+		} catch (Throwable t) {
+			newFriendsCount = 0;
+		}
+		if(newFriendsCount > 0){
+			tvNum.setVisibility(View.VISIBLE);
+			tvNum.setText(String.valueOf(newFriendsCount));
+		}else{
+			tvNum.setVisibility(View.GONE);
+		}
+		if (pd != null && pd.isShowing()) {
+			pd.dismiss();
+		}
+	}
+	// 寮瑰???浇妗?
+	private void showDialog(){
+		if (pd != null && pd.isShowing()) {
+			pd.dismiss();
+		}
+		pd = CommonDialog.ProgressDialog(this);
+		pd.show();
+	}
+	// ??氦?ㄦ?淇℃?
+	private void registerUser(String country, String phone) {
+		Random rnd = new Random();
+		int id = Math.abs(rnd.nextInt());
+		String uid = String.valueOf(id);
+		String nickName = "SmsSDK_User_" + uid;
+		String avatar = AVATARS[id % 12];
+		SMSSDK.submitUserInfo(uid, nickName, avatar, country, phone);
+	}
+	
+	private void registerUser(String country, String phone, String password) {
+		Log.i("phone", phone);
+		Log.i("password",password);
+	}
+}

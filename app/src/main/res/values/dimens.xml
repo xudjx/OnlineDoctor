@@ -1,0 +1,65 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!-- 文字的大小我们使用sp单位
+         UI位置，UI大小我们用dp单位 -->
+    <dimen name="activity_horizontal_margin">3dp</dimen>
+    <dimen name="activity_vertical_margin">3dp</dimen>
+	<dimen name="activity_card_margin">1dp</dimen>
+    <dimen name="Small_TextSize">20sp</dimen>
+	<dimen name="Small_Tiny_TextSize">17sp</dimen>
+    <dimen name="Tiny_TextSize">15sp</dimen>
+	<dimen name="Tiny_Tiny_TextSize">14sp</dimen>
+	<dimen name="PatientInfo_TextSize">13sp</dimen>
+    <dimen name="Big_TextSize">25sp</dimen>
+    <dimen name="test_large_text_size">16sp</dimen>
+    <dimen name="test_common_padding">5.0dip</dimen>
+	<dimen name="test_common_listview_padding">15.0dp</dimen>
+	<dimen name="test_listview_vertical_padding">10.0dp</dimen>
+	<dimen name="test_primary_text_size">14.0sp</dimen>
+	<dimen name="grid_item_size">80dp</dimen>
+	
+	<dimen name="ui_style_guideline_length_page_space">15.0dip</dimen>
+	<dimen name="actionbar_height">48.0dip</dimen> 
+	<dimen name="width_size_actionbar_title">160.0dip</dimen>
+	<dimen name="ui_style_guideline_text_size_actionbar_title">18sp</dimen>
+	<dimen name="ui_style_guideline_text_size_actionbar_item">15.0sp</dimen>
+	<dimen name="notify_text_size">10sp</dimen>
+	
+	<dimen name="size_dialog">600.0px</dimen>
+
+	<dimen name="label_text_size">11sp</dimen>
+	<dimen name="msg_name_size">18sp</dimen>
+
+	<dimen name="title_bar_height">55dp</dimen>
+	<dimen name="title_text_dimen">18sp</dimen>
+
+	<dimen name="image_dimen">65dp</dimen>
+
+	<!-- 问诊界面相关的大小值 -->
+	<dimen name="face_dimen">56dp</dimen>
+	<dimen name="chat_name_dimen">16sp</dimen>
+	<dimen name="chat_message_dimen">14sp</dimen>
+	<dimen name="chat_label_dimen">12sp</dimen>
+	<dimen name="chat_card_divide">0dp</dimen>
+	<dimen name="chat_card_padding_vertical">9dp</dimen>
+	<dimen name="chat_card_padding_horizontal">5dp</dimen>
+
+	<dimen name="chat_input_icon">30dp</dimen>
+	<dimen name="chat_input_expression">26dp</dimen>
+	<dimen name="chat_send">45dp</dimen>
+
+	<dimen name="chat_head_icon">40dp</dimen>
+
+	<dimen name="card_divide_margin">2dp</dimen>
+
+
+	<dimen name = "textSize"> 18sp</dimen>
+	<dimen name = "textSize_sub"> 16sp</dimen>
+	<dimen name = "textSize_sub_sub"> 14sp</dimen>
+
+	<dimen name = "patient_list_shadow">3dp</dimen>
+	<dimen name = "checkbox_size">20dp</dimen>
+	<dimen name = "universal_shadow_height">5dp</dimen>
+
+</resources>

@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.onlinedoctor.view.CommonActionbarBackableRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_survey_title"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:layout_marginLeft="15dp"-->
+                <!--android:layout_marginRight="15dp"-->
+                <!--android:text="问卷标题"-->
+                <!--android:textSize="@dimen/Small_TextSize"-->
+                <!--android:textColor="@color/black" />-->
+
+            <EditText
+                android:id="@+id/et_survey_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:hint="请输入问卷名称"
+                android:minLines="6"
+                android:gravity="left|top"
+                android:inputType="textMultiLine"
+                android:background="@drawable/bg_edittext"/>
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_survey_abstract"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="15dp"-->
+                <!--android:text="欢迎词(问卷开始显示)" />-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/et_survey_abstract"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="15dp"-->
+                <!--android:text="欢迎参加本次答题" />-->
+
+            <Button
+                android:id="@+id/bt_survey_create"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/blue_btn"
+                android:text="创 建"
+                android:textColor="@color/white"
+                android:textSize = "@dimen/Small_TextSize"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/progressBarHolder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.4"
+            android:animateLayoutChanges="true"
+            android:background="#000000"
+            android:clickable="true"
+            android:visibility="gone">
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>

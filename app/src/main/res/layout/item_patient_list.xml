@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/search_contact_catalog"
+        android:layout_width="wrap_content"
+        android:layout_height="0dip"
+        android:layout_weight="1.0"
+        android:paddingBottom="1dip"
+        android:paddingLeft="30dip"
+        android:paddingTop="3dip"
+        android:text="A"
+        android:textColor="@color/font_sub" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/carditem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="@dimen/card_divide_margin"
+        android:clickable="true"
+        android:background="@color/white"
+        card_view:cardElevation="@dimen/patient_list_shadow"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_card_item"
+            android:gravity="center_vertical|left"
+            android:orientation="horizontal"
+            android:paddingBottom="12dp"
+            android:paddingLeft="18dp"
+            android:paddingRight="20dp"
+            android:paddingTop="12dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/left_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/search_contact_headIcon"
+                        android:layout_width="@dimen/face_dimen"
+                        android:layout_height="@dimen/face_dimen"
+                        android:scaleType="center"
+                        android:src="@drawable/user_default"
+                        android:transitionName="faceImage" />
+                </RelativeLayout>
+
+                <CheckBox
+                    android:id="@+id/item_patient_check_box"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="1dp"
+                    android:clickable="false"
+                    android:textColor="@color/font_sub"
+                    style="@style/CustomCheckboxTheme"
+                    android:visibility="gone"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false" />
+
+                <RelativeLayout
+                    android:id="@+id/middle_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/left_layout"
+                    android:layout_toLeftOf="@id/item_patient_check_box"
+                    android:orientation="vertical">
+        <!--
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center_vertical|left"
+                        android:singleLine="true"
+                        android:text= "信息： "
+                        android:textColor="@color/font"
+                        android:textSize="@dimen/Tiny_Tiny_TextSize" />
+                        -->
+
+                    <TextView
+                        android:id="@+id/user_name_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:maxLines="1"
+                        android:text="韩小野   男   18岁"
+                        android:textColor="@color/font"
+                        android:textSize="@dimen/Tiny_Tiny_TextSize"
+                        />
+
+                    <!--
+                    <TextView
+                        android:id="@+id/beizhu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/user_name_value"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="备注： "
+                        android:textColor="@color/font_sub"
+                        android:textSize="@dimen/Tiny_Tiny_TextSize" />-->
+
+                    <TextView
+                        android:id="@+id/beizhu_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/user_name_value"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="的户回口静静地抵抗asdfasdfasdf抵抗抵抗"
+                        android:textColor="@color/font_sub"
+                        android:textSize="@dimen/Tiny_Tiny_TextSize" />
+
+                    <!--
+                    <TextView
+                        android:id="@+id/label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/beizhu"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:text="标签： "
+                        android:textColor="@color/font_sub"
+                        android:textSize="@dimen/Tiny_Tiny_TextSize" />-->
+
+                    <TextView
+                        android:id="@+id/label_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/beizhu_value"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="有钱   |   长期久asdfasdf坐   |   头痛无力"
+                        android:textColor="@color/font_sub"
+                        android:textSize="@dimen/Tiny_Tiny_TextSize" />
+                </RelativeLayout>
+           </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
+
+
+
+<!--
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/search_contact_catalog"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1.0"
+        android:background="#E0E0E0"
+        android:paddingBottom="5dip"
+        android:paddingLeft="5dip"
+        android:paddingTop="5dip"
+        android:textColor="#454545" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/search_contact_headIcon"
+            android:layout_width="48.0dip"
+            android:layout_height="48.0dip"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/descImage"
+            android:padding="5dip" />
+
+        <TextView
+            android:id="@+id/search_contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dip"
+            android:layout_toRightOf="@+id/search_contact_headIcon"
+            android:singleLine="true"
+            android:textColor="#000"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</LinearLayout>
+
+-->

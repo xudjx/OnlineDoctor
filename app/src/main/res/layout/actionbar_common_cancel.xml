@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/actionbar_common_backable_view"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/title_bar_height">
+
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@drawable/blue_bar">
+        <TextView
+            android:id="@id/actionbar_common_backable_title_tv"
+            style="@style/text_actionbar_title_style"
+            android:layout_centerInParent="true"
+            android:text="自定义标题" />
+
+        <TextView
+            android:id="@id/actionbar_common_backable_left_tv"
+            style="@style/text_actionbar_item_tv_style"
+            android:layout_alignParentLeft = "true"
+            android:gravity="center_vertical"
+            android:text="取消"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@id/actionbar_common_backable_right_tv"
+            style="@style/text_actionbar_item_tv_style"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:text="自定义"
+            android:visibility="visible" />
+
+<!--     <com.wangjie.androidbucket.customviews.button.ColorFilterImageButton
+        xmlns:cfib="http://schemas.android.com/apk/res-auto"
+        android:id="@id/actionbar_common_backable_right_ibtn"
+        style="@style/text_actionbar_item_ibtn_style"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/setting_icon"
+        android:visibility="gone"
+        cfib:filterAlphaVector="0.5" /> -->
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/shadow_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/universal_shadow_height"
+        android:layout_below="@id/actionbar"
+        android:background="@drawable/shadow"/>
+
+</RelativeLayout>

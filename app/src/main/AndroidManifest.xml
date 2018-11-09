@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.onlinedoctor.activity"
+    android:versionCode="4"
+    android:versionName="2.0.0" >
+	
+    <uses-sdk
+        android:minSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CALL_PHONE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.RECEIVE_SMS" />
+	<uses-permission android:name="android.permission.GET_TASKS" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.VIBRATE"/>
+
+    <application
+        android:name="com.onlinedoctor.application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_logo"
+        android:label="@string/app_name"
+        android:theme="@style/MaterialDrawerTheme.Light.DarkToolbar">
+        <activity
+            android:name="com.onlinedoctor.activity.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask">
+        </activity>
+        <activity
+            android:name=".MessageActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name=".chats.ForwardActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".chats.MsgMutilChatActivity"
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".PatientActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name=".ToolActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name=".MineActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name=".mine.homepage.MinePageActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".mine.homepage.ModifyDoctorName"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".mine.homepage.ModifyDoctorEmail"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".mine.homepage.ModifyDoctorAddress"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".mine.homepage.ModifyDoctorIntroduction"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".mine.homepage.ModifyDoctorCid"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".mine.homepage.ModifyDoctorClinic"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".mine.homepage.ModifyDoctorRoom"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".mine.homepage.ModifyDoctorRank"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".mine.fee.SelfDefinedFeesActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+        </activity>
+        <activity
+            android:name=".mine.fee.SelfDefinedFeeDetail"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".mine.settings.Setting"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".mine.settings.ModifyPassword"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".mine.settings.AboutUs"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".mine.settings.ServiceProtocol"
+            android:label="@string/app_name" >
+        </activity>
+        <activity 
+        	android:name=".tools.response.FastResponseActivity"
+        	android:label="@string/app_name" >
+        </activity>
+        <activity 
+        	android:name=".tools.response.FastResponseAdd"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:label="@string/app_name" >
+        </activity>
+        <activity android:name=".tools.clinic.OfficeHoursActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".tools.survey.DiseaseSurveyActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".tools.survey.DiseaseSurveyCreateNew"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".tools.survey.DiseaseSurveyUpdate"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".tools.survey.DiseaseSurveyQuestionsActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".tools.survey.DiseaseSurveyQuestionTypeChoices"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".tools.survey.DiseaseSurveyQuestionTypeSubjective"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".tools.prescription.PrescriptionActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".tools.prescription.PrescriptionManageActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".chats.ChatActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:screenOrientation="portrait">
+        </activity>
+       <activity
+            android:name=".patient.NewPatientActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".patient.PatientInfoActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".patient.LabelActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".patient.AddLabelActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".patient.EditLabelActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".patient.EditCommentActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name="com.onlinedoctor.activity.patient.PatientSelectActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".chats.CameraActivity"
+            android:label="@string/app_name">
+           </activity>
+        <activity
+            android:name=".login.LoginActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:label="@string/app_name"
+            android:launchMode="singleTask">
+           </activity>
+        <activity
+            android:name=".login.WelcomeActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login.RegisterActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+		android:name="com.mob.tools.MobUIShell"
+		android:configChanges="keyboardHidden|orientation|screenSize"
+		android:theme="@android:style/Theme.Translucent.NoTitleBar"
+		android:windowSoftInputMode="stateHidden|adjustResize" />
+        
+        <activity
+            android:theme="@style/IMTheme_Transparent"
+            android:name=".chats.ImageDetailActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".mine.wallet.MyWalletActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".mine.wallet.CashActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".mine.wallet.AddBankActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".mine.wallet.ChooseBankActivity"
+            android:label="@string/app_name">
+        </activity>
+         <activity
+            android:name=".mine.wallet.AddAlipayActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".mine.wallet.AddMobileActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".mine.wallet.WithdrawActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".mine.wallet.OrderDetailActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".login.FillBasicInfoActivity"
+            android:label="OnlineDoctor">
+
+        </activity>
+        <activity android:name="com.dajiazhongyi.studio.ui.widget.photoview.ViewPagerActivity"
+            android:label="图片浏览"/>
+        <activity
+            android:name="vn.tungdx.mediapicker.activities.MediaPickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MediaPickerTheme" />
+        <service 
+	        android:name="com.onlinedoctor.service.FloatBallService"  
+	        android:enabled="true"
+			android:exported="true"/>
+
+        <service
+            android:name="com.onlinedoctor.service.FloatBallService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.onlinedoctor.service.KeepAliveService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver android:name="com.onlinedoctor.service.BootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <meta-data android:value="5602d86367e58eff4e0046f4" android:name="UMENG_APPKEY"></meta-data>
+        <meta-data android:value="testChannel" android:name="UMENG_CHANNEL"/>
+    </application>
+
+</manifest>

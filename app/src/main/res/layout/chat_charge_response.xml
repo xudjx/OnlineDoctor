@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/charge_response_layout"
+    android:layout_width="190dp"
+    android:layout_height="33dp"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/trans_font_sub_sub"
+    android:gravity="center"
+    android:padding="1dp"
+    android:visibility="visible"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/card"
+        android:layout_width="16dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/card_small" />
+
+    <TextView
+        android:id="@+id/charge_response"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/card"
+        android:gravity="center_vertical"
+        android:text="老东东支付了你的项目"
+        android:textColor="@color/white"
+        android:textSize="@dimen/chat_message_dimen" />
+
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.00"
+        android:background="@color/withcard_background"
+        android:orientation="vertical"></LinearLayout>
+
+    <!-- 底部导航菜单 -->
+    <include layout="@layout/layout_bottom"/>
+
+</LinearLayout>

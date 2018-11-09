@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/withcard_background"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/patient_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/patient_info_big_title"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/title_bar_height"
+            android:gravity="center"
+            android:transitionName="actionBar"
+            android:background="@drawable/blue_bar" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/title_contact"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/title_text_dimen"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+        <com.onlinedoctor.view.CommonActionbarBackableRelativeLayout
+            android:id="@+id/patient_info_bar"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/search_card"
+        android:background="@color/withcard_background"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dip"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_below="@id/patient_bar"
+        card_view:cardElevation="@dimen/patient_list_shadow">
+        <com.onlinedoctor.view.SearchEditText
+            android:id="@+id/search_contact"
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:background="@drawable/search_bar_edit_selector"
+            android:drawableLeft="@drawable/actionbar_search_icon"
+            android:hint="@string/tip_search_contact"
+            android:textSize="@dimen/Tiny_Tiny_TextSize"
+            android:singleLine="true"
+            android:textColor="@color/font_sub_sub"
+            android:textColorHint="@color/font_sub_sub"/>
+    </android.support.v7.widget.CardView>
+
+
+    <!--
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="?android:attr/listDivider" />
+        -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/withcard_background"
+        android:layout_below="@id/search_card"
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/contact_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false" />
+
+        <RelativeLayout
+            android:id="@+id/label_no_content_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <ImageView
+                android:id="@+id/patient_no_content_font"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"  />
+
+            <ImageView
+                android:id="@+id/patient_no_content_pic"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/dialog"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_gravity="center"
+            android:background="@drawable/voip_toast_bg"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="30.0dip"
+            android:visibility="invisible" />
+
+        <com.onlinedoctor.view.PatientSideBars
+            android:id="@+id/sidebar"
+            android:layout_width="30.0dip"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/font_sub_sub"
+            android:layout_gravity="right|center" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/shadow_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/universal_shadow_height"
+        android:layout_below="@id/patient_bar"
+        android:background="@drawable/shadow"/>
+
+</RelativeLayout>
